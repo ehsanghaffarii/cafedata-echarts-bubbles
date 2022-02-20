@@ -169,17 +169,11 @@ const option = {
 };
 
 /**
- * The element to be rendered in the DOM
- * @type document.getElementById
- * @private
- */
-var chartElement = document.getElementById("chart1");
-
-/**
  * Initialize the chart with the element to be rendered
  * @type echarts.init
  * @private
  */
+var chartElement = document.getElementById("chart1");
 let chart1 = echarts.init(chartElement);
 
 /**
