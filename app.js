@@ -3,6 +3,11 @@ const NUMBER_OF_CHARTS = 1;
 
 const title = "Cafe bubbles Chart";
 
+/**
+ * Fake Data for the chart
+ * @type Array
+ * @private
+ */
 const data = [
   [
     [28604, 77, 17096869, "Australia", 1990],
@@ -48,6 +53,11 @@ const data = [
   ],
 ];
 
+/**
+ * The options for the chart to be rendered
+ * @type Object
+ * @private
+ */
 const option = {
   backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [
     {
@@ -60,7 +70,7 @@ const option = {
     },
   ]),
   title: {
-    text: "Life Expectancy and GDP by Country",
+    text: title,
     left: "5%",
     top: "3%",
   },
@@ -158,21 +168,35 @@ const option = {
   ],
 };
 
-// chart1
+/**
+ * The element to be rendered in the DOM
+ * @type document.getElementById
+ * @private
+ */
 var chartElement = document.getElementById("chart1");
 
+/**
+ * Initialize the chart with the element to be rendered
+ * @type echarts.init
+ * @private
+ */
 let chart1 = echarts.init(chartElement);
 
-// test events
-chart1.on("click", function (params) {
-  console.log(params);
-});
-
-// chart1.on("mouseover", function (params) {
-//   console.log(params);
-// });
-
+/**
+ * Render the chart with the options and element
+ * @type echarts.setOption
+ * @private chart1.setOption(option);
+ */
 if (option && typeof option === "object") {
   chart1.setOption(option);
   console.log(chart1.getOption());
 }
+
+/**
+ * Event listener for the chart
+ * @type EventListener
+ * @private
+ */
+chart1.on("click", function (params) {
+  console.log(params);
+});
