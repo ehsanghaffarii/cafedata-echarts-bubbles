@@ -1,0 +1,19 @@
+{
+  "name": "cafedata-bubbles-chart",
+  "version": "1.0.0",
+  "description": "Bubbles chart for Cafedata",
+  "main": "app.js",
+  "repository": "",
+  "author": "EhsanGhaffar <vegas@pro.ai>",
+  "license": "MIT",
+  "scripts": {
+    "build": "showdown makehtml -i source.md -o index.html && webpack"
+  },
+  "devDependencies": {
+    "showdown": "^1.5.4",
+    "webpack": "^1.14.0"
+  },
+  "dependencies": {
+    "echarts": "^3.3.2"
+  }
+}
