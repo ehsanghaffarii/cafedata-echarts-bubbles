@@ -193,4 +193,5 @@ if (option && typeof option === "object") {
  */
 chart1.on("click", function (params) {
   console.log(params);
+  console.log(option);
 });
